@@ -1,10 +1,11 @@
 # API-NodeJS-Express-MongoDB
 
 ## Principais recursos
--  Cadastro de usuário
--  Autenticação de usuário com JWT (JSON Web Token)
--  Recuperação de senha com NodeMailer
--  CRUD e relacionamentos com MongoDB
+
+*  Cadastro de usuário
+*  Autenticação de usuário com JWT (JSON Web Token)
+*  Recuperação de senha com NodeMailer
+*  CRUD e relacionamentos com MongoDB
 
 ## Endpoints
 
@@ -12,10 +13,11 @@
 
 **Rota para registrar um novo usuário.**
 
-    POST {{ base_url  }}/auth/register
+  POST {{ base_url  }}/auth/register
 
 JSON
-```json
+
+``` json
 {
 	"name": "Nome",
 	"email": "example@email.com",
@@ -24,7 +26,8 @@ JSON
 ```
 
 RESPOSTA
-```json
+
+``` json
 {
   "user": {
     "_id": "5d938d0ff0975544808dfcf2",
@@ -39,10 +42,11 @@ RESPOSTA
 
 **Rota para autenticar um usuário.**
 
-    POST {{ base_url  }}/auth/authenticate
+  POST {{ base_url  }}/auth/authenticate
 
 JSON
-```json
+
+``` json
 {
 	"email": "example@email.com",
 	"password": "123456"
@@ -50,7 +54,8 @@ JSON
 ```
 
 RESPOSTA
-```json
+
+``` json
 {
   "user": {
     "_id": "5d938778a604a342f45981e5",
@@ -65,26 +70,29 @@ RESPOSTA
 
 **Rota para solicitar alteração de senha.**
 
-    POST {{ base_url  }}/auth/forgot_password
+  POST {{ base_url  }}/auth/forgot_password
 
 JSON
-```json
+
+``` json
 {
 	"email": "example@email.com"
 }
 ```
 
 RESPOSTA VIA E-MAIL
-```html
+
+``` html
 <p>Você esqueceu sua senha? Não tem problema, utilize esse token: {{ token }}</p>
 ```
 
 **Rota para alterar senha.**
 
-    POST {{ base_url  }}/auth/reset_password
+  POST {{ base_url  }}/auth/reset_password
 
 JSON
-```json
+
+``` json
 {
 	"email": "example@email.com",
 	"token": "5086d1cfba74a7f84023c5d0ac45ae541aab7cdc",
@@ -99,7 +107,8 @@ JSON
     GET {{ base_url  }}/projects
 
 RESPOSTA
-```json
+
+``` json
 {
   "projects": [
     {
@@ -145,7 +154,8 @@ RESPOSTA
     GET {{ base_url  }}/projects/{{ projectId }}
 
 RESPOSTA
-```json
+
+``` json
 {
   "project": [
     {
@@ -191,7 +201,8 @@ RESPOSTA
     POST {{ base_url  }}/projects
 
 JSON
-```json
+
+``` json
 {
 	"title": "New project",
 	"description": "New description",
@@ -209,7 +220,8 @@ JSON
 ```
 
 RESPOSTA
-```json
+
+``` json
 {
   "project": [
     {
@@ -255,7 +267,8 @@ RESPOSTA
     PUT {{ base_url  }}/projects/{{ projectId }}
 
 JSON
-```json
+
+``` json
 {
 	"title": "New project (Updated)",
 	"description": "New description (Updated)",
@@ -273,7 +286,8 @@ JSON
 ```
 
 RESPOSTA
-```json
+
+``` json
 {
   "project": [
     {
@@ -317,5 +331,4 @@ RESPOSTA
 **Rota para deletar um projeto específico.**
 
     DELETE {{ base_url  }}/projects/{{ projectId }}
-
 

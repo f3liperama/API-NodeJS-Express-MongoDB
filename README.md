@@ -2,7 +2,7 @@
 
 ## Descrição
 
-API para gerenciamento de projetos e tarefas realizadas por usuário.
+API para gerenciamento de projetos e tarefas realizadas por cada usuário.
 
 ## Principais recursos
 

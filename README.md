@@ -1,5 +1,9 @@
 # API-NodeJS-Express-MongoDB
 
+## Descrição
+
+API para gerenciamento de projetos e tarefas realizadas por usuário.
+
 ## Principais recursos
 
 *  Cadastro de usuário

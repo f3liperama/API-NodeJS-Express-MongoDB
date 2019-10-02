@@ -17,7 +17,7 @@ API para gerenciamento de projetos e tarefas realizadas por cada usuário.
 
 **Rota para registrar um novo usuário.**
 
-  POST {{ base_url  }}/auth/register
+    POST {{ base_url  }}/auth/register
 
 JSON
 
@@ -46,7 +46,7 @@ RESPOSTA
 
 **Rota para autenticar um usuário.**
 
-  POST {{ base_url  }}/auth/authenticate
+    POST {{ base_url  }}/auth/authenticate
 
 JSON
 
@@ -74,7 +74,7 @@ RESPOSTA
 
 **Rota para solicitar alteração de senha.**
 
-  POST {{ base_url  }}/auth/forgot_password
+    POST {{ base_url  }}/auth/forgot_password
 
 JSON
 
@@ -92,7 +92,7 @@ RESPOSTA VIA E-MAIL
 
 **Rota para alterar senha.**
 
-  POST {{ base_url  }}/auth/reset_password
+    POST {{ base_url  }}/auth/reset_password
 
 JSON
 
